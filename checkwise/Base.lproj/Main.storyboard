@@ -43,6 +43,9 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="Items" id="Fgo-2T-Ccb">
+                        <barButtonItem key="leftBarButtonItem" title="Settings" image="Gruppe 3.png" id="3wJ-b5-S5i">
+                            <color key="tintColor" red="1" green="0.57810515169999999" blue="0.0" alpha="0.75" colorSpace="custom" customColorSpace="sRGB"/>
+                        </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="ccj-nk-dIQ">
                             <color key="tintColor" red="1" green="0.57810515169999999" blue="0.0" alpha="0.75" colorSpace="custom" customColorSpace="sRGB"/>
                             <connections>
@@ -78,7 +81,7 @@
                                     <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" verticalHuggingPriority="245" text="Add Something..." textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="w09-x2-jvd">
                                         <rect key="frame" x="0.0" y="25.5" width="374" height="333"/>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <color key="tintColor" red="1" green="0.57810515169999999" blue="0.0" alpha="0.75" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <color key="tintColor" red="1" green="0.57810515169999999" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <color key="textColor" red="1" green="0.57810515169999999" blue="0.0" alpha="0.75" colorSpace="custom" customColorSpace="sRGB"/>
                                         <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="30"/>
                                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
@@ -105,7 +108,7 @@
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QNS-41-O9C">
                                                 <rect key="frame" x="0.0" y="0.0" width="374" height="35"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="185" id="VWT-go-XHH"/>
+                                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="180" id="VWT-go-XHH"/>
                                                 </constraints>
                                                 <fontDescription key="fontDescription" type="system" pointSize="19"/>
                                                 <state key="normal" title="Cancel">
@@ -177,4 +180,7 @@
             <point key="canvasLocation" x="133.33333333333334" y="141.96428571428569"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="Gruppe 3.png" width="25" height="13"/>
+    </resources>
 </document>

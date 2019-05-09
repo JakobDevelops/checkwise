@@ -7,9 +7,12 @@
 //
 
 import UIKit
+import CoreData
 
 class AddTodoViewController: UIViewController {
-
+    
+    var managedContext: NSManagedObjectContext!
+ 
     @IBOutlet weak var textView: UITextView!
     @IBOutlet weak var segmentedControl: UISegmentedControl!
     @IBOutlet weak var doneButton: UIButton!
@@ -47,20 +50,30 @@ class AddTodoViewController: UIViewController {
     
     @IBAction func cancel(_ sender: UIButton) {
         dismiss(animated: true)
-        textView.resignFirstResponder() //wenn cancel gedrückt wird, wird das Keyboard instant geschlossen
+        textView.resignFirstResponder()
+        //wenn cancel gedrückt wird, wird das Keyboard instant geschlossen
     }
     
     @IBAction func done(_ sender: UIButton) {
+        
+        //check if something is in the text view
+        guard let title = textView.text, !title.isEmpty else {
+            return
+        }
+        let item = Items(context: managedContext)
+        item.title = title
+        item.priority = Int16(segmentedControl.selectedSegmentIndex)
+        item.date = Date()
+        
+        do {
+            try managedContext.save()
+            dismiss(animated: true)
+            textView.resignFirstResponder()
+        } catch {
+            print("Error saving item \(error)")
+        }
+        
     }
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
 
 }
 

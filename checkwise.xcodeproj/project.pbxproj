@@ -16,8 +16,11 @@
 		F001222F22826F16002B60B6 /* checkwiseUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F001222E22826F16002B60B6 /* checkwiseUITests.swift */; };
 		F001223E22827A94002B60B6 /* AddTodoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F001223D22827A94002B60B6 /* AddTodoViewController.swift */; };
 		F001224022827BAE002B60B6 /* TodoTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F001223F22827BAE002B60B6 /* TodoTableViewController.swift */; };
-		F0C15A402282B1E300354917 /* Bildschirmfoto 2019-05-08 um 14.38.41.png in Resources */ = {isa = PBXBuildFile; fileRef = F0C15A3F2282B1E300354917 /* Bildschirmfoto 2019-05-08 um 14.38.41.png */; };
-		F0C15A422282B3E100354917 /* Bildschirmfoto 2019-05-08 um 14.38.41.png in Resources */ = {isa = PBXBuildFile; fileRef = F0C15A412282B3E100354917 /* Bildschirmfoto 2019-05-08 um 14.38.41.png */; };
+		F056FAEF2282CE5B00BC93AD /* Bildschirmfoto 2019-05-08 um 14.38.41.png in Resources */ = {isa = PBXBuildFile; fileRef = F056FAEE2282CE5B00BC93AD /* Bildschirmfoto 2019-05-08 um 14.38.41.png */; };
+		F0CFEB1722842F6300A57439 /* Gruppe 3@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = F0CFEB1622842F6300A57439 /* Gruppe 3@3x.png */; };
+		F0CFEB19228433F300A57439 /* trash.png in Resources */ = {isa = PBXBuildFile; fileRef = F0CFEB18228433F300A57439 /* trash.png */; };
+		F0CFEB1D2284374200A57439 /* Todos.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = F0CFEB1B2284374200A57439 /* Todos.xcdatamodeld */; };
+		F0CFEB1F2284381D00A57439 /* CoreDataStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0CFEB1E2284381D00A57439 /* CoreDataStack.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,8 +56,11 @@
 		F001223022826F16002B60B6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F001223D22827A94002B60B6 /* AddTodoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddTodoViewController.swift; sourceTree = "<group>"; };
 		F001223F22827BAE002B60B6 /* TodoTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoTableViewController.swift; sourceTree = "<group>"; };
-		F0C15A3F2282B1E300354917 /* Bildschirmfoto 2019-05-08 um 14.38.41.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Bildschirmfoto 2019-05-08 um 14.38.41.png"; path = "../../../Bildschirmfoto 2019-05-08 um 14.38.41.png"; sourceTree = "<group>"; };
-		F0C15A412282B3E100354917 /* Bildschirmfoto 2019-05-08 um 14.38.41.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Bildschirmfoto 2019-05-08 um 14.38.41.png"; sourceTree = "<group>"; };
+		F056FAEE2282CE5B00BC93AD /* Bildschirmfoto 2019-05-08 um 14.38.41.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Bildschirmfoto 2019-05-08 um 14.38.41.png"; sourceTree = "<group>"; };
+		F0CFEB1622842F6300A57439 /* Gruppe 3@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Gruppe 3@3x.png"; sourceTree = "<group>"; };
+		F0CFEB18228433F300A57439 /* trash.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = trash.png; sourceTree = "<group>"; };
+		F0CFEB1C2284374200A57439 /* Todos.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Todos.xcdatamodel; sourceTree = "<group>"; };
+		F0CFEB1E2284381D00A57439 /* CoreDataStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataStack.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -105,14 +111,14 @@
 		F001220D22826F15002B60B6 /* checkwise */ = {
 			isa = PBXGroup;
 			children = (
+				F0CFEB1A2284372100A57439 /* Core Data */,
+				F0CFEB1122842E0200A57439 /* Assets */,
 				F001223C22827A76002B60B6 /* VC */,
 				F001220E22826F15002B60B6 /* AppDelegate.swift */,
 				F001221022826F15002B60B6 /* ViewController.swift */,
 				F001221222826F15002B60B6 /* Main.storyboard */,
 				F001221522826F16002B60B6 /* Assets.xcassets */,
 				F001221722826F16002B60B6 /* LaunchScreen.storyboard */,
-				F0C15A3F2282B1E300354917 /* Bildschirmfoto 2019-05-08 um 14.38.41.png */,
-				F0C15A412282B3E100354917 /* Bildschirmfoto 2019-05-08 um 14.38.41.png */,
 				F001221A22826F16002B60B6 /* Info.plist */,
 			);
 			path = checkwise;
@@ -143,6 +149,25 @@
 				F001223F22827BAE002B60B6 /* TodoTableViewController.swift */,
 			);
 			path = VC;
+			sourceTree = "<group>";
+		};
+		F0CFEB1122842E0200A57439 /* Assets */ = {
+			isa = PBXGroup;
+			children = (
+				F0CFEB18228433F300A57439 /* trash.png */,
+				F056FAEE2282CE5B00BC93AD /* Bildschirmfoto 2019-05-08 um 14.38.41.png */,
+				F0CFEB1622842F6300A57439 /* Gruppe 3@3x.png */,
+			);
+			path = Assets;
+			sourceTree = "<group>";
+		};
+		F0CFEB1A2284372100A57439 /* Core Data */ = {
+			isa = PBXGroup;
+			children = (
+				F0CFEB1B2284374200A57439 /* Todos.xcdatamodeld */,
+				F0CFEB1E2284381D00A57439 /* CoreDataStack.swift */,
+			);
+			path = "Core Data";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -250,10 +275,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				F001221922826F16002B60B6 /* LaunchScreen.storyboard in Resources */,
-				F0C15A422282B3E100354917 /* Bildschirmfoto 2019-05-08 um 14.38.41.png in Resources */,
 				F001221622826F16002B60B6 /* Assets.xcassets in Resources */,
+				F0CFEB19228433F300A57439 /* trash.png in Resources */,
+				F0CFEB1722842F6300A57439 /* Gruppe 3@3x.png in Resources */,
 				F001221422826F15002B60B6 /* Main.storyboard in Resources */,
-				F0C15A402282B1E300354917 /* Bildschirmfoto 2019-05-08 um 14.38.41.png in Resources */,
+				F056FAEF2282CE5B00BC93AD /* Bildschirmfoto 2019-05-08 um 14.38.41.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -279,7 +305,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				F001221122826F15002B60B6 /* ViewController.swift in Sources */,
+				F0CFEB1D2284374200A57439 /* Todos.xcdatamodeld in Sources */,
 				F001224022827BAE002B60B6 /* TodoTableViewController.swift in Sources */,
+				F0CFEB1F2284381D00A57439 /* CoreDataStack.swift in Sources */,
 				F001223E22827A94002B60B6 /* AddTodoViewController.swift in Sources */,
 				F001220F22826F15002B60B6 /* AppDelegate.swift in Sources */,
 			);
@@ -610,6 +638,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		F0CFEB1B2284374200A57439 /* Todos.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				F0CFEB1C2284374200A57439 /* Todos.xcdatamodel */,
+			);
+			currentVersion = F0CFEB1C2284374200A57439 /* Todos.xcdatamodel */;
+			path = Todos.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = F001220322826F15002B60B6 /* Project object */;
 }
