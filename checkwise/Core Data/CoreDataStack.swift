@@ -13,7 +13,7 @@ class CoreDataStack {
     
     //Container thats interacts with the datamodel "Todos"
     var container : NSPersistentContainer {
-        let container = NSPersistentContainer(name: "Todos")
+    let container = NSPersistentContainer(name: "Todos")
         
         //responsible for loading the data and setting up a store to save the items
         container.loadPersistentStores { (description, error) in
@@ -22,9 +22,7 @@ class CoreDataStack {
                 return
             }
         }
-        
         return container
-        
     }
     
     

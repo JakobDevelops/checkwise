@@ -14,7 +14,8 @@ class TodoTableViewController: UITableViewController {
     //Responsible for updating the table view
     var resultsController: NSFetchedResultsController<Items>!
     let coreDataStack = CoreDataStack();
-
+    var isChecked = false;
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -34,7 +35,7 @@ class TodoTableViewController: UITableViewController {
         )
         resultsController.delegate = self
         
-        //Fetch data
+        //Fetch data: Daten aus dem persistenen Context laden
         do {
         try resultsController.performFetch()
         } catch {("Perform fetch error: \(error)")
@@ -52,7 +53,7 @@ class TodoTableViewController: UITableViewController {
         // Configure the cell...
         let todo = resultsController.object(at: indexPath)
         cell.textLabel?.text = todo.title
-
+        
         return cell
     }
     
@@ -64,6 +65,8 @@ class TodoTableViewController: UITableViewController {
             
             let todo = self.resultsController.object(at: indexPath)
             self.resultsController.managedObjectContext.delete(todo)
+            
+            //Safe context
             do {
                 try self.resultsController.managedObjectContext.save()
                 completion(true) //something like .apply();
@@ -73,7 +76,8 @@ class TodoTableViewController: UITableViewController {
             }
         }
         
-        // Todo action.image =
+        // Todo
+        //action.image
         action.backgroundColor = .red
         
         return UISwipeActionsConfiguration(actions: [action])
@@ -81,18 +85,55 @@ class TodoTableViewController: UITableViewController {
     
     //Check Swipe
     override func tableView(_ tableView: UITableView, leadingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
-        let action = UIContextualAction(style: .destructive, title: "Check") { (action, view, completion) in
-            //Todo: Delete
-            completion(true) //something like .apply();
+        
+        let action = UIContextualAction(style: .normal, title: "Check") { (action, view, completion) in
+            
+            //let _: NSMutableAttributedString =  NSMutableAttributedString(string:"taskLabel")
+            
+            /*attributeString.addAttribute(.strikethroughStyle, value: 1, range: NSRange(location: 0, length: taskLabel.text.count))
+            taskLabel.attributedText = attributeString */
+            
+            do {
+                try self.resultsController.managedObjectContext.save()
+                completion(true) //something like .apply();
+            } catch {
+                print("Checking failed: \(error)")
+                completion(false)
+            }
+            
         }
         
-        // Todo action.image
         action.backgroundColor = .blue
-        
+    
         return UISwipeActionsConfiguration(actions: [action])
     }
     
 
+    /*Tab to check
+        override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
+        let todo = self.resultsController.object(at: indexPath)
+        self.resultsController.managedObjectContext.refreshAllObjects()
+        
+            if tableView.cellForRow(at: indexPath)?.accessoryType == UITableViewCell.AccessoryType.checkmark {
+                tableView.cellForRow(at: indexPath)?.accessoryType =  UITableViewCell.AccessoryType.none
+                do {
+                    try self.resultsController.managedObjectContext.save()
+                } catch {
+                    print("Check failed: \(error)")
+                }
+                
+            } else {
+                tableView.cellForRow(at: indexPath)?.accessoryType = UITableViewCell.AccessoryType.checkmark
+                do {
+                    try self.resultsController.managedObjectContext.save()
+                } catch {
+                    print("Check failed: \(error)")
+                }
+            }
+    }*/
+    
+    
     
     // MARK: - Navigation
 
@@ -132,3 +173,15 @@ extension TodoTableViewController: NSFetchedResultsControllerDelegate {
         }
     }
 }
+
+
+func checkAccessoryType(cell: UITableViewCell, isChecked: Bool){
+    if isChecked == true {
+        cell.accessoryType = .checkmark
+    } else {
+        cell.accessoryType = .none
+    }
+}
+
+
+
